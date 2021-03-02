@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Books App</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>update register book</h1>
+    <hr />
+    <form action="/app/books/<%= book._id %>?_method=PUT " method="POST">
+        
+      <img src="<%= book.url %> "/>
+        <label>Title</label> </br>
+        <input type="text" name="title" placeholder="title of book" value="<%= book.title %> "/> </br>
+        <label>URL</label> </br>
+        <input type="text" name="url" placeholder="ex: www.google.com/book.jpg" value="<%= book.url %> "/><br/>
+        <label>Description</label> <br>
+        <textarea  name="description" placeholder="summary description" rows="4" cols="50"><%= book.description %> </textarea></br>
+        
+        <input type="submit" value="update" />
+        <a href="/app/books"><button>back</button></a>
+    </form> 
+    <hr />
+  </body>
+  <script src="/javascripts/main.js"></script>
+</html>
